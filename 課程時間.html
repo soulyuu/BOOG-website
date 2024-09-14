@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/tailwind.output.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <title>calsstime</title>
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+      </head>
+</head>
+<body class="bg-black text-white">
+    <header id="header" class="flex justify-between items-center py-5 pl-10 pr-5">
+        <div class="flex items-center">
+          <img src="img/BOOG.png" alt="logo" class="w-24 object-contain" />
+          <a href="#"><span class="text-2xl xl:text-6xl hidden xl:flex font-bold ml-2">BOOGSTUDIO</span></a>
+        </div>  
+        <ol class="text-l font-light flex space-x-16 items-end justify-center mt-10 hidden xl:flex">
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>師資介紹</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>風格介紹</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/stories/highlights/18032884942851836/" target="_blank"><span>課程時間</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.youtube.com/@boogstudio_tw" target="_blank"><span>影像記錄</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>最新消息</span></a></li>
+        </ol>
+        <div class="flex items-center justify-end lg:hidden">
+          <button class="text-white focus:outline-none" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div id="menuItems" class="hidden lg:flex space-x-10 mt-10">
+          <button class="border border-white bg-transparent px-3 py-2 rounded-md hover-up transition duration-300" onclick="toggleTheme()">
+              <i class="fas fa-sun"></i> 
+          </button>
+          <div class="relative">
+              <button class="border border-white bg-transparent px-2 py-2 rounded-md flex items-center hover-up transition duration-300" onclick="toggleDropdown(event)">
+                  Languages
+                  <i class="fa-solid fa-caret-down ml-1"></i>
+              </button>
+              <div id="languageDropdown" class="absolute hidden font-light bg-black border mt-2 w-30 rounded-md z-10">
+                  <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">English(US)</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">English(UK)</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">日本語</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">繁體中文</a>
+              </div>
+          </div>
+          <button class="border border-white bg-transparent px-8 py-2 rounded-md hover-up transition duration-300">LOGIN</button>
+        </div>
+     </header> 
+     <main class="bg-g">
+        <div class="flex justify-center">
+            <img class="w-3/4 m-10" src="img/課程時間.png">
+        </div>
+     </main>
+     <footer id="footer" class="grid grid-cols-1 lg:grid-cols-3 pb-20 px-10  items-start">
+        <div class="flex items-center justify-center xl:justify-start  col-span-1">
+          <img src="img/BOOG.png" alt="logo" class="w-12 xl:w-24 object-contain" />
+          <a href="#"><span class="text-2xl xl:text-6xl font-bold ml-2 mt-10">BOOGSTUDIO</span></a>
+        </div>
+        <div class="col-span-1"></div>
+        <div class="text-xs font-light flex space-x-16 col-start-3 justify-end mt-5 hidden md:flex">
+          <div>
+            <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+            <a href="#"><span class="text-sm font-bold">HOME</span></a>
+          </div>
+          <div>
+            <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+            <a href="#"><span class="text-sm font-bold">COMPANY</span></a>
+            <div class="flex flex-col space-y-2 mt-2">
+              <a href="#"><span>ABOUT US</span></a>
+              <a href="#"><span>CONTACT US</span></a>
+              <a href="#"><span>FAQ</span></a>
+            </div>
+          </div>
+          <div>
+            <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+            <a href="#"><span class="text-sm font-bold">LANGUAGES</span></a>
+            <div class="flex flex-col space-y-2 mt-2">
+              <a href="#"><span>ENGLISH(US)</span></a>
+              <a href="#"><span>ENGLISH(UK)</span></a>
+              <a href="#"><span>日本語</span></a>
+              <a href="#"><span>繁體中文</span></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/tailwind.output.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>calsstime</title>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+    <header id="header" class="flex justify-between items-center py-5 pl-10 pr-5">
+        <div class="flex items-center">
+            <img src="img/BOOG.png" alt="logo" class="w-24 object-contain" />
+            <a href="#"><span class="text-2xl xl:text-6xl hidden xl:flex font-bold ml-2">BOOGSTUDIO</span></a>
+        </div>  
+        <ol class="text-l font-light flex space-x-16 items-end jer mt-10 hidden xl:flex">
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>師資介紹</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>風格介紹</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/stories/highlights/18032884942851836/" target="_blank"><span>課程時間</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.youtube.com/@boogstudio_tw" target="_blank"><span>影像記錄</span></a></li>
+            <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>最新消息</span></a></li>
+        </ol>
+        <div class="flex items-center justify-center lg:hidden">
+            <button class="text-white focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="menuItems" class="hidden lg:flex space-x-10 mt-10">
+            <button class="border border-white bg-transparent px-3 py-2 rounded-md hover-up transition duration-300" onclick="toggleTheme()">
+                <i class="fas fa-sun"></i> 
+            </button>
+            <div class="relative">
+                <button class="border border-white bg-transparent px-2 py-2 rounded-md flex items-center hover-up transition duration-300" onclick="toggleDropdown(event)">
+                    Languages
+                    <i class="fa-solid fa-caret-down ml-1"></i>
+                </button>
+                <div id="languageDropdown" class="absolute hidden font-light bg-black border mt-2 w-30 r-10">
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">English(US)</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">English(UK)</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">日本語</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">繁體中文</a>
+                </div>
+            </div>
+            <button class="border border-white bg-transparent px-8 py-2 rounded-md hover-up transition duration-300">LOGIN</button>
+        </div>
+    </header> 
+    <main>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 m-5">
+            <a href="https://example.com/qingxuan" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">基礎 律動</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">基礎律動課程旨在為舞蹈初學者提供堅實的基礎。這門課涵蓋基本動作訓練、節奏感培養和身體協調性訓練。學習如何在音樂節奏中表現自如，並掌握簡單的舞蹈組合。適合所有希望通過舞蹈增強身體活力和表達能力的人士。</p>
+                <img src="img/y.jpg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>                       
+            <a href="https://example.com/yajun" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">進階 Hiphop</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">進階 Hiphop 課程旨在教授學員更高難度的動作和組合，注重音樂節奏感的表現和舞蹈個性的發展。適合已具備一定舞蹈基礎，希望挑戰更深層次舞蹈技巧的學員。</p>
+                <img src="img/雅君.jpeg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/penny" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">K-POP</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">K-POP課程專為喜愛韓流文化和音樂的同學設計，其中舞蹈結合了許多舞風，如常見的Hip Hop、Waacking或Jazz等風格都有可能運用於K-POP歌曲舞蹈之中。適合想要學習現代流行舞蹈風格的舞者。</p>
+                <img src="img/penny.jpg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/ep" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">基礎 Popping</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">基礎 Popping 課程教授從0開始的Popping基礎，包括身體擺動和肌肉收縮的動作訓練。適合對街舞風格有興趣的學員。</p>
+                <img src="img/綜合P.jpg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/outdoor-dance" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">流線 街舞</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">流線街舞課程融合了城市風格和自由表達，教授如何在開放空間中進行動態和節奏的掌握。適合喜歡戶外舞蹈和創意表達的學員。</p>
+                <img src="img/是外街舞.jpg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/caicai" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">Jazz Rock</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">Jazz Rock 課程結合了爵士樂和搖滾風格，是一門動感十足的舞蹈！腳步動作和音樂配合技巧。適合喜愛音樂節奏和舞蹈表現的學員。</p>
+                <img src="img/菜菜.jpeg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/jsun" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">Soul Dance</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">發源於60-70年代的Soul Dance，是當時Soul、Funk等黑人音樂盛行衍生的舞蹈。非常適合 #舞蹈入門者 嘗試學習！
+                    有跳舞經驗的同學也能更好地開發身體素質，感受更好的氣氛。</p>
+                <img src="img/Jsun.jpeg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/poni" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">基礎 House</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">House舞蹈的特點是充滿活力、節奏感強，並且強調身體的自由表達和舞者與音樂的互動。 House 舞風在腳步上呈現出細膩多變的感覺。 雖然舞者通常在上半身和手臂的擺動讓人看起來十分輕鬆，但這種風格強調快速而複雜的腳上動作。</p>
+                <img src="img/poni.jpeg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/longnv" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">舞感 養成</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">舞感養成課程旨在提升學員對舞蹈節奏和動態感的敏感度，培養舞蹈中的自然流暢性和表達力。適合想要接觸舞蹈以及初學的學員。</p>
+                <img src="img/小龍女.jpg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+            <a href="https://example.com/nini" target="_blank" class="relative bg-black text-white p-4 m-5 rounded-lg flex flex-col items-center justify-center h-99 hover-up transition duration-300 hover-glow">
+                <div class="text-xl font-bold z-10 mb-2"></div>
+                <div class="text-xl md:text-3xl lg:text-5xl font-bold text-center z-10">身體 舞蹈訓練</div>
+                <p class="text-lg text-center mt-3 p-5 font-light z-10 bg-black bg-opacity-50">身體舞蹈訓練課程專注於提升學員的身體控制和舞蹈技巧，包括力量、靈活性和協調性的綜合訓練。適合追求舞蹈技巧全面提升的學員。</p>
+                <img src="img/妮妮.jpg" alt="老師照片" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-lg" />
+            </a>            
+        </div>                       
+     </main>
+
+    <footer id="footer" class="grid grid-cols-1 lg:grid-cols-3 pb-20 px-10 items-start">
+        <div class="flex items-center justify-center xl:justify-start col-span-1">
+            <img src="img/BOOG.png" alt="logo" class="w-12 xl:w-24 object-contain" />
+            <a href="#"><span class="text-2xl xl:text-6xl font-bold ml-2 mt-10">BOOGSTUDIO</span></a>
+        </div>
+        <div class="col-span-1"></div>
+        <div class="text-xs font-light flex space-x-16 col-start-3nter mt-5 hidden md:flex">
+            <div>
+                <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+                <a href="#"><span class="text-sm font-bold">HOME</span></a>
+            </div>
+            <div>
+                <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+                <a href="#"><span class="text-sm font-bold">COMPANY</span></a>
+                <div class="flex flex-col space-y-2 mt-2">
+                    <a href="#"><span>ABOUT US</span></a>
+                    <a href="#"><span>CONTACT US</span></a>
+                    <a href="#"><span>FAQ</span></a>
+                </div>
+            </div>
+            <div>
+            <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+            <a href="#"><span class="text-sm font-bold">LANGUAGES</span></a>
+            <div class="flex flex-col space-y-2 mt-2">
+              <a href="#"><span>ENGLISH(US)</span></a>
+              <a href="#"><span>ENGLISH(UK)</span></a>
+              <a href="#"><span>日本語</span></a>
+              <a href="#"><span>繁體中文</span></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+</body>
+</html>

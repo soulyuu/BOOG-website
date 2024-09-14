@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/tailwind.output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>BOOGSTUDIO</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+  <header id="header" class="flex justify-between items-center py-5 pl-10 pr-5">
+    <div class="flex items-center">
+      <img src="img/BOOG.png" alt="logo" class="w-24 object-contain" />
+      <a href="#"><span class="text-2xl xl:text-6xl hidden xl:flex font-bold ml-2">BOOGSTUDIO</span></a>
+    </div>  
+    <ol class="text-l font-light flex space-x-16 items-end justify-center mt-10 hidden xl:flex">
+        <li class="hover-glow hover-up transition duration-300"><a href="師資介紹.html" target="_blank"><span>師資介紹</span></a></li>
+        <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>風格介紹</span></a></li>
+        <li class="hover-glow hover-up transition duration-300"><a href="課程時間.html" target="_blank"><span>課程時間</span></a></li>
+        <li class="hover-glow hover-up transition duration-300"><a href="https://www.youtube.com/@boogstudio_tw" target="_blank"><span>影像記錄</span></a></li>
+        <li class="hover-glow hover-up transition duration-300"><a href="https://www.instagram.com/boogstudio_tw/" target="_blank"><span>最新消息</span></a></li>
+    </ol>
+    <div class="flex items-center justify-end lg:hidden">
+      <button class="text-white focus:outline-none" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="menuItems" class="hidden lg:flex space-x-10 mt-10">
+      <button class="border border-white bg-transparent px-3 py-2 rounded-md hover-up transition duration-300" onclick="toggleTheme()">
+          <i class="fas fa-sun"></i> 
+      </button>
+      <div class="relative">
+          <button class="border border-white bg-transparent px-2 py-2 rounded-md flex items-center hover-up transition duration-300" onclick="toggleDropdown(event)">
+              Languages
+              <i class="fa-solid fa-caret-down ml-1"></i>
+          </button>
+          <div id="languageDropdown" class="absolute hidden font-light bg-black border mt-2 w-30 rounded-md z-10">
+              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">English(US)</a>
+              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">English(UK)</a>
+              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">日本語</a>
+              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-900">繁體中文</a>
+          </div>
+      </div>
+      <button class="border border-white bg-transparent px-8 py-2 rounded-md hover-up transition duration-300">LOGIN</button>
+    </div>
+ </header>      
+  <main class="">
+    <section class="relative">
+      <div class="relative p-24 bg-cover bg-no-repeat grid grid-cols-1 lg:grid-cols-2 inset-0 bg-black bg-opacity-100" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/BG.jpg)">
+        <div class="flex flex-col items-center justify-center leading-tight hidden lg:flex">      
+            <p class="text-4xl mb-0 font-serif uppercase">Live a Wonderful Life through</p>
+            <p class="text-10xl font-bold uppercase">Dance<span class="text-golden">!</span></p>
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="top-0 right-0 bg-black pr-10 pl-5 pt-5 pb-10 w-9/12 max-w-screen-lg rounded-xl border-double border-4 border-golden">
+            <p class="text-2xl font-bold font-serif">Create a FREE account to get started</p>
+            <p class="text-sm m-0 pb-10">*Special price for new users only</p>
+            <div class="space-y-10">
+              <form class="text-xl text-base mb-4 space-y-2">
+                <label for="FirstName">First Name:</label>
+                <input type="text" id="FirstName" name="FirstName" placeholder="輸入您的姓氏" class="font-light text-lg bg-black border-b border-white w-full mb-2 focus:border-white focus:outline-none" />
+              </form>
+              <form class="text-xl text-base mb-4 space-y-2">
+                <label for="LastName">Last Name:</label>
+                <input type="text" id="LastName" name="LastName" placeholder="輸入您的名字" class="font-light text-lg bg-black border-b border-white w-full mb-2 focus:border-white focus:outline-none" />
+              </form>
+              <form class="text-xl text-base mb-4 space-y-2">
+                <label for="EmailAddress">Email Address:</label>
+                <input type="email" id="EmailAddress" name="EmailAddress" placeholder="輸入您的電子信箱" class="font-light text-lg bg-black border-b border-white w-full mb-2 focus:border-white focus:outline-none" />
+              </form>
+              <form class="text-xl text-base mb-4 space-y-2">
+                <label for="PassWord">PassWord:</label>
+                <input type="password" id="PassWord" name="PassWord" placeholder="輸入您想要設置的密碼" class="font-light text-lg bg-black border-b border-white w-full mb-2 focus:border-white focus:outline-none" />
+              </form>
+            </div>
+            <div class="flex justify-center pt-5">
+              <button class="uppercase text-xl sm:text-md md:text-xl lg:text-2xl font-light font-serif bg-orange-500 hover-glow hover-up transition duration-300 rounded-md sm:px-16 py-3 sm:py-2 mt-3">
+                Continue
+              </button>
+            </div>              
+          </div>
+        </div>
+      </div>
+    </section>
+    <div>
+      <div class="flex justify-center m-5">
+        <iframe class="rounded-lg px-0 hidden xl:flex" width="1280" height="720" src="https://www.youtube.com/embed/_kGhDpX8aQE?si=HxgHZBbPnMcSUPIF&autoplay=1&mute=1"
+     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>        
+    </div>
+    <section class="grid grid-cols-1 xl:grid-cols-3 gap-5">
+      <div class="col-span-1 relative m-5 rounded-md">
+        <a href="師資介紹.html" target="_blank">
+            <div class="bg-gray-900 p-32 rounded-md relative overlay hover-glow hover-up transition duration-300">
+                <img src="img/teachers.jpeg" alt="teachers" class="absolute top-0 left-0 w-full h-full z-0 object-cover rounded-md" style="filter: brightness(30%);" />
+                <img src="img/BOOG.png" alt="logo" class="absolute top-0 left-0 m-3 w-12 z-10" />
+                <div class="relative z-10 text-center hover-glow hover-up transition duration-300">
+                    <p class="text-4xl font-bold">TEACHERS</p>
+                    <p class="text-lg font-light">師資介紹</p>
+                </div>
+            </div>
+        </a>
+      </div>
+      <div class="col-span-1 relative m-5 rounded-md">
+        <a href="https://www.instagram.com/boogstudio_tw/" target="_blank">
+          <div class="bg-gray-999 p-32 rounded-md relative hover-glow hover-up transition duration-300">
+            <img src="img/styles.jpeg" alt="styles" class="absolute top-0 left-0 w-full h-full z-0 object-cover rounded-md" style="filter: brightness(30%);" />
+            <img src="img/BOOG.png" alt="logo" class="absolute top-0 left-0 m-3 w-12 z-10" />
+            <div class="relative z-10 text-center hover-glow hover-up transition duration-300">
+              <p class="text-4xl font-bold">STYLES</p>
+              <p class="text-lg font-light">風格介紹</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-span-1 relative m-5 rounded-md">
+        <a href="課程時間.html" target="_blank">
+          <div class="bg-gray-999 p-32 rounded-md relative hover-glow hover-up transition duration-300">
+            <img src="img/SCHEDULE.jpg" alt="schedule" class="absolute top-0 left-0 w-full h-full z-0 object-cover rounded-md" style="filter: brightness(30%);" />
+            <img src="img/BOOG.png" alt="logo" class="absolute top-0 left-0 m-3 w-12 z-10" />
+            <div class="relative z-10 text-center hover-glow hover-up transition duration-300">
+              <p class="text-4xl font-bold">SCHEDULE</p>
+              <p class="text-lg font-light">課程時間</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-span-1 relative m-5 rounded-md">
+        <a href="https://www.youtube.com/@boogstudio_tw" target="_blank">
+          <div class="bg-gray-999 p-32 rounded-md relative hover-glow hover-up transition duration-300">
+            <img src="img/YOUTUBE.jpeg" alt="youtube" class="absolute top-0 left-0 w-full h-full z-0 object-cover rounded-md" style="filter: brightness(30%);" />
+            <img src="img/BOOG.png" alt="logo" class="absolute top-0 left-0 m-3 w-12 z-10" />
+            <div class="relative z-10 text-center hover-glow hover-up transition duration-300">
+              <p class="text-4xl font-bold">影像記錄</p>
+              <p class="text-lg font-light">YouTube頻道</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-span-1 lg:col-span-2 relative m-5 rounded-md">
+        <a href="https://www.instagram.com/boogstudio_tw/" target="_blank">
+          <div class="bg-gray-999 p-32 rounded-md relative flex items-center justify-center hover-glow hover-up transition duration-300">
+            <img src="img/NEWS.jpeg" alt="news" class="absolute top-0 left-0 w-full h-full z-0 object-cover rounded-md" style="filter: brightness(30%);" />
+            <img src="img/BOOG.png" alt="logo" class="absolute top-0 left-0 m-3 w-12 z-10" />
+            <div class="relative z-10 text-center hover-glow hover-up transition duration-300">
+              <p class="text-4xl font-bold">NEWS</p>
+              <p class="text-lg font-light">近期公告以及活動消息</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>            
+    <div class="flex justify-center bottom-0">
+      <a href="#" class="text-4xl font-bold bg-orange-500 rounded-md px-20 py-6 my-20 hover-glow hover-up transition duration-700">
+        JOIN NOW
+      </a>
+    </div>            
+  </main>
+  <footer id="footer" class="grid grid-cols-1 lg:grid-cols-3 pb-20 px-10  items-start">
+    <div class="flex items-center justify-center xl:justify-start  col-span-1">
+      <img src="img/BOOG.png" alt="logo" class="w-12 xl:w-24 object-contain" />
+      <a href="#"><span class="text-2xl xl:text-6xl font-bold ml-2 mt-10">BOOGSTUDIO</span></a>
+    </div>
+    <div class="col-span-1"></div>
+    <div class="text-xs font-light flex space-x-16 col-start-3 justify-end mt-5 hidden md:flex">
+      <div>
+        <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+        <a href="#"><span class="text-sm font-bold">HOME</span></a>
+      </div>
+      <div>
+        <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+        <span class="text-sm font-bold">COMPANY</span>
+        <div class="flex flex-col space-y-2 mt-2">
+          <a href="#"><span class="hover-glow">ABOUT US</span></a>
+          <a href="#"><span class="hover-glow">CONTACT US</span></a>
+          <a href="#"><span class="hover-glow">FAQ</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="bg-orange-500 h-2 w-6 rounded-md mb-2"></div>
+        <span class="text-sm font-bold">LANGUAGES</span>
+        <div class="flex flex-col space-y-2 mt-2">
+          <a href="#"><span class="hover-glow">ENGLISH(US)</span></a>
+          <a href="#"><span class="hover-glow">ENGLISH(UK)</span></a>
+          <a href="#"><span class="hover-glow">日本語</span></a>
+          <a href="#"><span class="hover-glow">繁體中文</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>  
+  <script src="script.js"></script>         
+</body>
+</html>
