@@ -1,0 +1,16 @@
+.light-theme-header-footer {
+    background-color: #f6fff8;
+    color: #003049;
+  }
+  
+.light-theme-header-footer .border-white {
+    border-color: black;
+  }
+  
+.hover-glow:hover {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+.hover-up:hover {
+    transform: translateY(-8px);
+  }
